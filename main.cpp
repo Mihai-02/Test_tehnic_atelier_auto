@@ -5,6 +5,7 @@
 #include "Autobuz.h"
 #include "Camion.h"
 #include "Functii_Angajati.h"
+#include "Atelier.h"
 #include <iostream>
 #include <string>
 #include <vector>
@@ -16,7 +17,7 @@ using namespace std;
 
 int main()
 {
-    vector<Angajat*> angajati;
+    /* vector<Angajat*> angajati;
 
     angajati=adaugare_angajat(angajati);
     angajati=adaugare_angajat(angajati);
@@ -26,17 +27,14 @@ int main()
 
     vector<Angajat*>::iterator it;
     for(it=angajati.begin(); it!=angajati.end(); it++)
-        (*it)->afisare();
+        (*it)->afisare(); */
 
     
-   // map<int, map<int, int>>
+    Atelier at;
+    at.give_name();
 
-   //Linii de cod noi
-   //Linii de cod noi
-   //Linii de cod noi
-   //Linii de cod noi
-   //Linii de cod noi
-   //Linii de cod noi
+    at.print_info();
+
 
 
 

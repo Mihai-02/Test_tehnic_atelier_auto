@@ -8,4 +8,12 @@ class Atelier
 {
     string nume;
     vector<Post> posturi;
+
+    public:
+        Atelier(string name={}){nume=name;}
+        void give_name(){cout << "Introduceti un nume pentru atelier: "; cin >> nume;}
+        void print_info() const
+        {
+            cout << "Numele atelierului: " << nume << "\n";
+        }
 };

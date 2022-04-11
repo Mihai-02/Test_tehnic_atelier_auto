@@ -1,9 +1,3 @@
-#include "Asistent.h"
-#include "Director.h"
-#include "Mecanic.h"
-#include "Standard.h"
-#include "Autobuz.h"
-#include "Camion.h"
 #include <queue>
 
 class Post
