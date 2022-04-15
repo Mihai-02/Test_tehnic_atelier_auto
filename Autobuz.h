@@ -1,3 +1,4 @@
+#pragma once
 #include "Masina.h"
 
 class Autobuz: public Masina

@@ -35,3 +35,8 @@ float Angajat::get_salariu()
 {
     return this->get_vechime()*coef_salariat*1000.0F;
 }
+
+Angajat& Angajat::operator=(const Angajat& ang)
+{
+    
+}
