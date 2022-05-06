@@ -40,9 +40,18 @@ void Atelier::adaugare_angajat()
     }
 
     if(type=="Asistent")
-        posturi.push_back(Post(Asistent(num, pre, nast, anga)));
+        posturi.push_back(Post(num, pre, nast, anga, "Asistent"));
     else if(type=="Mecanic")
-        posturi.push_back(Post(Mecanic(num, pre, nast, anga)));
+        posturi.push_back(Post(num, pre, nast, anga, "Mecanic"));
     else
-        posturi.push_back(Post(Director(num, pre, nast, anga)));
+        posturi.push_back(Post(num, pre, nast, anga, "Director"));
+
+}
+
+void Atelier::print_lista_angajati()
+{
+    vector<Post>::iterator it;
+    for(it=posturi.begin(); it!=posturi.end(); it++)
+        it->print_info();
+
 }

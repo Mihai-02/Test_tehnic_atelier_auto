@@ -31,9 +31,15 @@ int main()
 
     
     Atelier at;
-    at.give_name();
+    at.give_title();
+    at.print_title();
+    at.adaugare_angajat();
+    at.adaugare_angajat();
+    cout << at.is_open() << endl;
 
-    at.print_info();
+    at.print_lista_angajati();
+
+
 
     
 

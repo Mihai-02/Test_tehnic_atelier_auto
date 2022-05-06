@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Angajat.h"
 
 class Mecanic: public Angajat

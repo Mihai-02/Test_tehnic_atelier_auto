@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Angajat.h"
 
 class Asistent: public Angajat
