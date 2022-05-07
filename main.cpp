@@ -37,7 +37,9 @@ int main()
     at.adaugare_angajat();
     cout << at.is_open() << endl;
 
-    at.print_lista_angajati();
+    //at.print_lista_angajati();
+
+    at.print_full_info();
 
 
 

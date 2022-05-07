@@ -16,3 +16,21 @@ void Post::print_info() const
 {
     ang->afisare();
 }
+
+void Post::print_full()
+{
+    ang->afisare();
+    cout << "Masini standard luate in primire:\n";
+    queue<Standard> mtemp=masini;
+    while(mtemp.size()>0)
+    {
+        cout << mtemp.front();
+        mtemp.pop();
+    }
+    cout << "Autobuz luate in primire:\n";
+    if(autobuze.size()!=0)
+        cout << autobuze.front();
+    cout << "Camion luate in primire:\n";
+    if(camioane.size()!=0)
+        cout << camioane.front();
+}

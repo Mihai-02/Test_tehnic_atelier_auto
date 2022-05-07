@@ -55,3 +55,15 @@ void Atelier::print_lista_angajati()
         it->print_info();
 
 }
+
+void Atelier::print_full_info()
+{
+    cout << "\n=======================================\n\t\t";
+    print_title();
+    cout << "=======================================\n";
+
+
+    vector<Post>::iterator it;
+    for(it=posturi.begin(); it!=posturi.end(); it++)
+        it->print_full();
+}

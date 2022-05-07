@@ -18,4 +18,5 @@ class Post
     public:
         Post(string, string, Data, Data, const string);
         void print_info() const;
+        void print_full();
 };
