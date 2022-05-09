@@ -22,6 +22,7 @@ class Angajat
         virtual void afisare() const;
         float get_salariu();
         int get_vechime();
+        inline string get_nume_angajat(){return nume;}
         friend void modificare_angajat(vector<Angajat*>);
         friend float calcul_salariu(vector<Angajat*>);
 

@@ -18,5 +18,5 @@ class Atelier
         inline bool is_open() const {return (posturi.size() > 0);}
         void print_lista_angajati();
         void print_full_info();
-        void insert_new_vehicle();
+        bool insert_new_vehicle();   //Returneaza 1 daca vehiculul e adaugat cu succes si 0 in caz contrar
 };

@@ -39,14 +39,43 @@ void Post::add_masina()
 {
     if(masini.size()==3)
     {
-        cout << "Angajatul dorit nu mai are locuri de masini disponibile\n";
+        cout << "Angajatul dorit nu mai are locuri pentru masini disponibile\n";
         return;
     }
     else
     {
         Standard st;
         cin >> st;
-
+        masini.push(st);
     }
+}
 
+void Post::add_camion()
+{
+    if(masini.size()==1)
+    {
+        cout << "Angajatul dorit nu mai are loc pentru camion disponibil\n";
+        return;
+    }
+    else
+    {
+        Camion cam;
+        cin >> cam;
+        camioane.push(cam);
+    }
+}
+
+void Post::add_autobuz()
+{
+    if(masini.size()==1)
+    {
+        cout << "Angajatul dorit nu mai are loc pentru autobuz disponibil\n";
+        return;
+    }
+    else
+    {
+        Autobuz aut;
+        cin >> aut;
+        autobuze.push(aut);
+    }
 }

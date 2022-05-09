@@ -28,4 +28,6 @@ istream& operator>>(istream& dev, Standard& sta)
         cout << "Transmisie:";
         dev >> sta.transmisie;
     } while (sta.transmisie!="Manual" && sta.transmisie!="Automat");
+
+    return dev;
 }

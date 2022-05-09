@@ -28,5 +28,7 @@ istream& operator>>(istream& dev, Autobuz& cam)
         cout << "Numar locuri";
         dev >> cam.nr_locuri;
     } while (cam.nr_locuri<=0);
+
+    return dev;
 }
 

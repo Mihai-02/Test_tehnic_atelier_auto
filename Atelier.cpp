@@ -66,3 +66,44 @@ void Atelier::print_full_info()
     for(it=posturi.begin(); it!=posturi.end(); it++)
         it->print_full();
 }
+
+//Returneaza 1 daca vehiculul e adaugat cu succes si 0 in caz contrar
+bool Atelier::insert_new_vehicle()
+{
+    string tip;
+    do
+    {
+        cout << "Introduceti tipul de vehicul:";
+        cin >> tip;
+    } while (tip!="Standard" && tip!="Camion" && tip!="Autobuz");
+
+    string employee;
+    cout << "Introduceti numele de familie al angajatului la care doriti intrarea(Introduceti \"-\" pentru nicio preferinta):";
+    cin >> employee;
+
+    if(employee=="-")
+    {
+        vector<Post>::iterator it=posturi.begin();
+        //while(it!=posturi.end() && )
+    }
+    else
+    {
+        vector<Post>::iterator it;
+        for (it=posturi.begin(); it!=posturi.end(); it++)
+        {
+            if(it->get_nume_angajat()==employee)
+            {
+                if(tip=="Standard")
+                    it->add_masina();
+                else if(tip=="Camion")
+                    it->add_camion();
+                else
+                    it->add_autobuz();
+                break;
+            }
+        }
+        return 1;   //de sters
+    }
+    
+    return 1;       //de sters
+}

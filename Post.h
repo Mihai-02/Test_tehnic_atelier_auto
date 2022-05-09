@@ -22,4 +22,8 @@ class Post
         void add_masina();
         void add_autobuz();
         void add_camion();
+        string get_nume_angajat(){return ang->get_nume_angajat();}
+        inline void remove_masina(){masini.pop();}
+        inline void remove_camion(){camioane.pop();}
+        inline void remove_autobuz(){autobuze.pop();}
 };

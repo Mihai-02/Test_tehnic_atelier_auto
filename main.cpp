@@ -39,6 +39,8 @@ int main()
 
     //at.print_lista_angajati();
 
+    at.insert_new_vehicle();
+
     at.print_full_info();
 
 

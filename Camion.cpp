@@ -25,7 +25,9 @@ istream& operator>>(istream& dev, Camion& cam)
     dev>>(Masina&)cam;
     do
     {
-        cout << "Tonaje:";
+        cout << "Tonaj:";
         dev >> cam.tonaj;
     } while (cam.tonaj<=0);
+
+    return dev;
 }
