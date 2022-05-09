@@ -19,4 +19,7 @@ class Post
         Post(string, string, Data, Data, const string);
         void print_info() const;
         void print_full();
+        void add_masina();
+        void add_autobuz();
+        void add_camion();
 };

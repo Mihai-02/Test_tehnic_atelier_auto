@@ -8,4 +8,5 @@ class Autobuz: public Masina
         Autobuz(int id, int kil, int an, bool dis, unsigned int  loc):Masina(id, kil, an, dis),nr_locuri(loc){}
         float valoare_asigurare(bool);
         friend ostream& operator<<(ostream&, const Autobuz&);
+        friend istream& operator>>(istream&, Autobuz&);
 };

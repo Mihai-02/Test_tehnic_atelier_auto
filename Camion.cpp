@@ -19,3 +19,13 @@ ostream& operator<<(ostream& dev, const Camion& cam)
 
     return dev;
 }
+
+istream& operator>>(istream& dev, Camion& cam)
+{
+    dev>>(Masina&)cam;
+    do
+    {
+        cout << "Tonaje:";
+        dev >> cam.tonaj;
+    } while (cam.tonaj<=0);
+}

@@ -27,10 +27,26 @@ void Post::print_full()
         cout << mtemp.front();
         mtemp.pop();
     }
-    cout << "Autobuz luate in primire:\n";
+    cout << "Autobuz luat in primire:\n";
     if(autobuze.size()!=0)
         cout << autobuze.front();
-    cout << "Camion luate in primire:\n";
+    cout << "Camion luat in primire:\n";
     if(camioane.size()!=0)
         cout << camioane.front();
+}
+
+void Post::add_masina()
+{
+    if(masini.size()==3)
+    {
+        cout << "Angajatul dorit nu mai are locuri de masini disponibile\n";
+        return;
+    }
+    else
+    {
+        Standard st;
+        cin >> st;
+
+    }
+
 }

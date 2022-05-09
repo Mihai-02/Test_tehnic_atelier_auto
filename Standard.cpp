@@ -19,3 +19,13 @@ ostream& operator<<(ostream& dev, const Standard& sta)
 
     return dev;
 }
+
+istream& operator>>(istream& dev, Standard& sta)
+{
+    dev>>(Masina&)sta;
+    do
+    {
+        cout << "Transmisie:";
+        dev >> sta.transmisie;
+    } while (sta.transmisie!="Manual" && sta.transmisie!="Automat");
+}

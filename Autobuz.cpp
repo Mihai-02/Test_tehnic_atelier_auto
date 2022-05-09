@@ -19,3 +19,14 @@ ostream& operator<<(ostream& dev, const Autobuz& aut)
 
     return dev;
 }
+
+istream& operator>>(istream& dev, Autobuz& cam)
+{
+    dev>>(Masina&)cam;
+    do
+    {
+        cout << "Numar locuri";
+        dev >> cam.nr_locuri;
+    } while (cam.nr_locuri<=0);
+}
+

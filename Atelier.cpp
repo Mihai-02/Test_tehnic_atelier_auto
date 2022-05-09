@@ -62,7 +62,6 @@ void Atelier::print_full_info()
     print_title();
     cout << "=======================================\n";
 
-
     vector<Post>::iterator it;
     for(it=posturi.begin(); it!=posturi.end(); it++)
         it->print_full();
