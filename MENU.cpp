@@ -26,6 +26,7 @@ void MENU(Atelier at)
         cout << "5. Adaugare angajat atelier\n";
         cout << "6. Client nou\n";
         cout << "7. Eliminare vehicul din coada(trecerea timpului)\n";
+        cout << "8. Inchidere\n";
 
         cout << "\n\nIntroduceti o optiune(1-7):";
         cin >> selection;
@@ -52,13 +53,18 @@ void MENU(Atelier at)
                 break;
             case '6':
                 at.insert_new_vehicle();
+                break;
             case '7':
                 remove_vehicles_time_passes(at);
+                break;
+            case '8':
+                cout << "La revedere!\n";
+                break;
 
-
-                
+            default:
+                cout << "Optiune invalida; va rugam alegeti o optiune din cele de mai sus\n";       
         }
-    } while (selection!="");
+    } while (selection!='8');
 
     return;
     

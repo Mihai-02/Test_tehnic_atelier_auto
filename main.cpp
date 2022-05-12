@@ -6,6 +6,7 @@
 #include "Camion.h"
 #include "Functii_Angajati.h"
 #include "Atelier.h"
+#include "menu.h"
 #include <iostream>
 #include <string>
 #include <vector>
@@ -32,7 +33,10 @@ int main()
     
     Atelier at;
     at.give_title();
-    at.print_title();
+
+    MENU(at);
+
+    /* at.print_title();
     at.adaugare_angajat();
     at.adaugare_angajat();
 
@@ -43,7 +47,7 @@ int main()
     at.insert_new_vehicle();
 
     at.print_full_info();
-
+ */
 
 
     
