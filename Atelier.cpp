@@ -84,26 +84,55 @@ bool Atelier::insert_new_vehicle()
     if(employee=="-")
     {
         vector<Post>::iterator it=posturi.begin();
-        //while(it!=posturi.end() && )
+        bool is_ok=0;
+        while(it!=posturi.end() && is_ok!=1)
+        {
+            if(tip=="Standard")
+                is_ok=it->add_masina();
+            else if(tip=="Camion")
+                is_ok=it->add_camion();
+            else
+                is_ok=it->add_autobuz();
+            
+            it++;
+        }
+        if(it==posturi.end() && is_ok==0)
+        {
+            cout << "Error: Nu exista nici un angajat liber\nVa rugam reveniti mai tarziu\n";
+            return 0;
+        }
+        cout << "Vehiculul a fost preluat cu succes\n";
+        return 1; 
     }
     else
     {
+        bool is_ok=1;
         vector<Post>::iterator it;
         for (it=posturi.begin(); it!=posturi.end(); it++)
         {
             if(it->get_nume_angajat()==employee)
             {
                 if(tip=="Standard")
-                    it->add_masina();
+                    is_ok=it->add_masina();
                 else if(tip=="Camion")
-                    it->add_camion();
+                    is_ok=it->add_camion();
                 else
-                    it->add_autobuz();
+                    is_ok=it->add_autobuz();
                 break;
             }
         }
-        return 1;   //de sters
+        if(is_ok==0)
+        {
+            cout << "Angajatul dorit nu mai are nici un loc disponibil\n";
+            return 0;
+        }
+            
+        if(it==posturi.end())
+        {
+            cout << "Error: Nu exista un angajat cu numele introdus\n";
+            return 0;
+        }
+        cout << "Vehiculul a fost preluat cu succes\n";
+        return 1;
     }
-    
-    return 1;       //de sters
 }

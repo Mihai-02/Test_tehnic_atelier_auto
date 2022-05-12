@@ -19,11 +19,14 @@ class Post
         Post(string, string, Data, Data, const string);
         void print_info() const;
         void print_full();
-        void add_masina();
-        void add_autobuz();
-        void add_camion();
+        bool add_masina();
+        bool add_autobuz();
+        bool add_camion();
         string get_nume_angajat(){return ang->get_nume_angajat();}
-        inline void remove_masina(){masini.pop();}
-        inline void remove_camion(){camioane.pop();}
-        inline void remove_autobuz(){autobuze.pop();}
+        inline void remove_masina(){if(masini.size()>0) masini.pop();}
+        inline void remove_camion(){if(camioane.size()>0) camioane.pop();}
+        inline void remove_autobuz(){if(autobuze.size()>0) autobuze.pop();}
+        inline bool is_available_masina(){return (masini.size()<3);}
+        inline bool is_available_camion(){return (camioane.size()<1);}
+        inline bool is_available_autobuz(){return (autobuze.size()<1);}
 };

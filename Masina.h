@@ -33,6 +33,7 @@ class Masina
       }
       friend istream& operator>>(istream& dev, Masina& mas)
       {
+        cout << "Introduceti detaliile vehiculului:\n";
         cout << "ID:";
         dev >> mas.ID;
         cout << "Numar kilometri:";
@@ -42,7 +43,7 @@ class Masina
         int k;
         do
         {
-          cout << "Diesel?(1/0)";
+          cout << "Diesel?(1/0):";
           dev >> k;
         } while (k>1 || k<0);
         mas.diesel=k;

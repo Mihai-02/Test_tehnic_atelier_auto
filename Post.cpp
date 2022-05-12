@@ -35,47 +35,43 @@ void Post::print_full()
         cout << camioane.front();
 }
 
-void Post::add_masina()
+
+//returneaza 1 daca se adauga cu succes vehiculul
+bool Post::add_masina()
 {
-    if(masini.size()==3)
-    {
-        cout << "Angajatul dorit nu mai are locuri pentru masini disponibile\n";
-        return;
-    }
+    if(!is_available_masina())
+        return 0;
     else
     {
         Standard st;
         cin >> st;
         masini.push(st);
+        return 1;
     }
 }
 
-void Post::add_camion()
+bool Post::add_camion()
 {
-    if(masini.size()==1)
-    {
-        cout << "Angajatul dorit nu mai are loc pentru camion disponibil\n";
-        return;
-    }
+    if(!is_available_camion())
+        return 0;
     else
     {
         Camion cam;
         cin >> cam;
         camioane.push(cam);
+        return 1;
     }
 }
 
-void Post::add_autobuz()
+bool Post::add_autobuz()
 {
-    if(masini.size()==1)
-    {
-        cout << "Angajatul dorit nu mai are loc pentru autobuz disponibil\n";
-        return;
-    }
+    if(!is_available_autobuz())
+        return 0;
     else
     {
         Autobuz aut;
         cin >> aut;
         autobuze.push(aut);
+        return 1;
     }
 }
