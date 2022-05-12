@@ -5,7 +5,7 @@
 #include "Autobuz.h"
 #include "Camion.h"
 #include "Functii_Angajati.h"
-#include "Atelier.h"
+//#include "Atelier.h"
 #include "menu.h"
 #include <iostream>
 #include <string>

@@ -19,5 +19,5 @@ class Atelier
         void print_lista_angajati();
         void print_full_info();
         bool insert_new_vehicle();   //Returneaza 1 daca vehiculul e adaugat cu succes si 0 in caz contrar
-        friend void remove_vehicles_time_passes();
+        friend void remove_vehicles_time_passes(Atelier);
 };

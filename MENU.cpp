@@ -25,16 +25,18 @@ void MENU(Atelier at)
         cout << "4. Afisare lista angajati extinsa\n";
         cout << "5. Adaugare angajat atelier\n";
         cout << "6. Client nou\n";
-        cout << "7. Eliminare vehicul din coada(trecerea timpului)\n";
+        cout << "7. Eliminare vehicule din coada(trecerea timpului)\n";
         cout << "8. Inchidere\n";
 
-        cout << "\n\nIntroduceti o optiune(1-7):";
+        cout << "\n\nIntroduceti o optiune(1-8):";
         cin >> selection;
 
         switch(selection)
         {
             case '1':
-                at.print_title();
+                cout << "\n=======================================\n\t\t";
+                print_title();
+                cout << "=======================================\n";
                 break;
             case '2':
                 if(at.is_open())
@@ -52,10 +54,10 @@ void MENU(Atelier at)
                 at.adaugare_angajat();
                 break;
             case '6':
-                at.insert_new_vehicle();
+                at.insert_new_vehicle();            //De facut caz angajat ocupat + schimbare angajat / plecare
                 break;
             case '7':
-                remove_vehicles_time_passes(at);
+                remove_vehicles_time_passes(at);    //NU MERGE
                 break;
             case '8':
                 cout << "La revedere!\n";
