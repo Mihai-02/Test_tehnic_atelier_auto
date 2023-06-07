@@ -35,7 +35,7 @@ void MENU(Atelier at)
         {
             case '1':
                 cout << "\n=======================================\n\t\t";
-                print_title();
+                at.print_title();
                 cout << "=======================================\n";
                 break;
             case '2':

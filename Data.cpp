@@ -7,8 +7,8 @@ using namespace std;
 
 bool Data::data_corecta() const
 {
-    time_t t = std::time(0);
-    tm* now = std::localtime(&t);
+    time_t t = time(0);
+    tm* now = localtime(&t);
     Data prezent(now->tm_mday, now->tm_mon+1, now->tm_year+1900);
 
     if(zi < 0 || luna < 0 || luna > 12)
