@@ -1,15 +1,13 @@
 #include "Atelier.h"
 #include <iostream>
 
-
-void remove_vehicles_time_passes(Atelier at)
+void remove_vehicles_time_passes(Atelier ate)
 {
-    vector<Post>::iterator it;
-    for(it=at.posturi.begin(); it!=at.posturi.end(); it++)
+    for (size_t i=0; i<ate.posturi.size(); i++)
     {
-        it->remove_masina();
-        it->remove_autobuz();
-        it->remove_camion();
+        ate.posturi.at(i).remove_masina();
+        ate.posturi.at(i).remove_autobuz();
+        ate.posturi.at(i).remove_camion();
     }
 }
 

@@ -86,13 +86,14 @@ bool Atelier::insert_new_vehicle()
         vector<Post>::iterator it=posturi.begin();
         bool is_ok=0;
         while(it!=posturi.end() && is_ok!=1)
+        for (size_t i=0; i<posturi.size(), is_ok!=1; i++)
         {
             if(tip=="Standard")
-                is_ok=it->add_masina();
+                is_ok=posturi.at(i).add_masina();
             else if(tip=="Camion")
-                is_ok=it->add_camion();
+                is_ok=posturi.at(i).add_camion();
             else
-                is_ok=it->add_autobuz();
+                is_ok=posturi.at(i).add_autobuz();
             
             it++;
         }
@@ -107,17 +108,20 @@ bool Atelier::insert_new_vehicle()
     else
     {
         bool is_ok=1;
-        vector<Post>::iterator it;
-        for (it=posturi.begin(); it!=posturi.end(); it++)
+        bool exists=0;
+        //vector<Post>::iterator it;
+        //for (it=posturi.begin(); it!=posturi.end(); it++)
+        for (size_t i=0; i<posturi.size(); i++)
         {
-            if(it->get_nume_angajat()==employee)
+            if(posturi.at(i).get_nume_angajat()==employee)
             {
+                exists=1;
                 if(tip=="Standard")
-                    is_ok=it->add_masina();
+                    is_ok=posturi.at(i).add_masina();
                 else if(tip=="Camion")
-                    is_ok=it->add_camion();
+                    is_ok=posturi.at(i).add_camion();
                 else
-                    is_ok=it->add_autobuz();
+                    is_ok=posturi.at(i).add_autobuz();
                 break;
             }
         }
@@ -127,7 +131,7 @@ bool Atelier::insert_new_vehicle()
             return 0;
         }
             
-        if(it==posturi.end())
+        if(!exists)
         {
             cout << "Error: Nu exista un angajat cu numele introdus\n";
             return 0;
